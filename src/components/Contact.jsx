@@ -7,8 +7,8 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs.sendForm(
-      "SERVICE_ID",
-      "TEMPLATE_ID",
+      "service_gb6luli",
+      "template_wc4rlyh",
       e.target,
       "IZpSheeOiWztLGDAO"
     )
