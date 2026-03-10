@@ -10,7 +10,7 @@ const Contact = () => {
       "SERVICE_ID",
       "TEMPLATE_ID",
       e.target,
-      "PUBLIC_KEY"
+      "IZpSheeOiWztLGDAO"
     )
     .then(() => {
       alert("Message sent!")
