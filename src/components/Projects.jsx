@@ -26,14 +26,14 @@ function Projects() {
         <div className="project-card">
           <div className="project-overlay">
             <h3>Project 2</h3>
-            <p>REST API with Java Spring Boot and PostgreSQL.</p>
+            <p>Coming soon</p>
           </div>
         </div>
 
         <div className="project-card">
           <div className="project-overlay">
             <h3>Project 3</h3>
-            <p>Interactive web app using React and Bootstrap.</p>
+            <p>Comming soon as well</p>
           </div>
         </div>
 

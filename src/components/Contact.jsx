@@ -2,9 +2,10 @@ import React from "react"
 import emailjs from "@emailjs/browser"
 import { useState } from "react";
 
-const [emailAlert, setEmailAlert] = useState("");
 
 const Contact = () => {
+
+const [emailAlert, setEmailAlert] = useState({ message: "", type: "" });
 
  const handleSubmit = (e) => {
   e.preventDefault();
@@ -15,36 +16,21 @@ const Contact = () => {
       e.target,
       "IZpSheeOiWztLGDAO"
     )
-  .then(() => {
-    setEmailAlert("Message sent successfully!");
-    e.target.reset();
-  })
-  .catch(() => {
-    setEmailAlert("Something went wrong. Please try again.");
+.then(() => {
+  setEmailAlert({
+    message: "✓ Message sent successfully! ",
+    type: "success"
   });
+  e.target.reset();
+})
+.catch(() => {
+  setEmailAlert({
+    message: "✗ Something went wrong . Please try again.",
+    type: "error"
+  });
+});
 };
 
-
-
-
-//   const sendEmail = (e) => {
-//     e.preventDefault()
-
-//     emailjs.sendForm(
-//       "service_gb6luli",
-//       "template_wc4rlyh",
-//       e.target,
-//       "IZpSheeOiWztLGDAO"
-//     )
-//     .then(() => {
-//       alert("Message sent!")
-//     })
-//     .catch(() => {
-//       alert("Something went wrong.")
-//     })
-
-//     e.target.reset()
-//   }
 
   return (
     <section className="contact" id="contact">
@@ -66,7 +52,11 @@ const Contact = () => {
 
         <button type="submit" id="send-button">Send</button>
 
-{emailAlert && <p className="form-message">{emailAlert}</p>}
+{emailAlert.message && (
+  <p className={`form-message ${emailAlert.type}`}>
+    {emailAlert.message}
+  </p>
+)}
 
       </form>
 

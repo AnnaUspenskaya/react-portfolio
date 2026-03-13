@@ -3,28 +3,28 @@ import myPicture from '../assets/my-picture.png'
 
 const Hero = () => {
   return (
-<section className="home" id="home">
+    <section className="home" id="home">
+      <div className="container text-center">
+        <div id="greeting">
+          <h2 className="display-1 fw-bold">HI<span className="accent">,</span><br />
+          I<span className="accent">'</span>M <span className="accent">ANNA</span></h2>
+          <p className="title mt-3">FULL STACK WEB DEVELOPER</p>
+          
 
-  <div className="hero-text">
-    <h2>
-      Hi<span className="accent">,</span><br/>
-      I<span className="accent">'</span>m <span className="accent">A</span>nna
-    </h2>
+          <div className="d-flex justify-content-center gap-2 mt-4">
+            <span className="badge rounded-pill border text-dark px-3 py-2">React</span>
+            <span className="badge rounded-pill border text-dark px-3 py-2">Java</span>
+            <span className="badge rounded-pill border text-dark px-3 py-2">Python</span>
+            <span className="badge rounded-pill border text-dark px-3 py-2">SQL</span>
+            <span className="badge rounded-pill border text-dark px-3 py-2">MongoDB</span>
+            <span className="badge rounded-pill border text-dark px-3 py-2">AWS</span>
+          </div>
+        </div>
+      </div>
 
-    <p className="title">FULL STACK WEB DEVELOPER</p>
-  </div>
-
-  <img src={myPicture} alt="Anna" className="hero-image"/>
-
-
-      <div className="tech-stack">
-  <span>React</span>
-  <span>Java</span>
-  <span>Python</span>
-  <span>SQL</span>
-  <span>MongoDB</span>
-</div>
-
+      <div className="my-picture">
+        <img src={myPicture} alt="Anna" />
+      </div>
     </section>
   )
 }

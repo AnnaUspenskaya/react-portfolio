@@ -9,10 +9,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
-
-
-  return (
-<div className="portfolio-wrapper"> 
+return (
+    <div className="portfolio-wrapper"> 
       <NavBar />
       <main> 
         <Hero />
